@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#382016">
+    <title>Cars | Libro Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto&family=Montserrat:wght@400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <h1>CARS: UNA HISTORIA DE AMISTAD</h1>
+    <p>Libro digital · Historia, personajes y metodología</p>
+</header>
+
+<main>
+    <p class="instruccion">
+        📖 ¡Bienvenido al mundo de Cars!
+        Toca la esquina derecha para avanzar y la izquierda para regresar.
+        ¡Que comience la aventura!
+    </p>
+
+    <div class="escenario">
+        <div id="libro">
+            <div class="pagina izquierda" id="izquierda"></div>
+            <div class="pagina derecha" id="derecha"></div>
+            <div class="lomo"></div>
+
+            <button class="zona atras" id="atras"
+                aria-label="Página anterior" title="Página anterior"></button>
+
+            <button class="zona adelante" id="adelante"
+                aria-label="Página siguiente" title="Página siguiente"></button>
+        </div>
+    </div>
+
+    <p id="numero" class="numero">Portada</p>
+    <p id="estadoMusica" class="estado-musica">Listo para comenzar</p>
+
+    <div class="controles">
+  <audio id="musica" src="musica.mp3" loop>
+
+  <button id="botonMusica" class="boton-musica" type="button" onclick="document.getElementById('musica').play()">
+    🎵 Activar música
+  </button>
+
+  <button id="botonLectura" class="boton-musica" type="button">
+    🔊 Leer páginas
+  </button>
+
+  <button id="botonDetener" class="boton-musica" type="button">
+    ⏹️ Detener lectura
+  </button>
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+<div id="mensajeCierre" class="mensaje-cierre">
+    <h2>🏁 CONTINUARÁ... 🏁</h2>
+    <p>El viaje de Rayo McQueen no termina aquí.</p>
+    <p>Una nueva carretera, nuevos amigos y una aventura
+    inesperada esperan en el horizonte.</p>
+    <p><strong>¡Gracias por leer esta historia!</strong></p>
+
+    <button class="boton-musica" type="button"
+            onclick="reiniciarLibro()">
+        📖 Abrir el libro otra vez
+    </button>
+</div>
